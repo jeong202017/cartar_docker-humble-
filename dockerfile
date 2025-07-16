@@ -12,11 +12,13 @@ RUN apt update && apt install -y \
     libprotobuf-dev protobuf-compiler \
     libceres-dev \
     libboost-all-dev \
+    libboost-iostreams-dev \
     libeigen3-dev \
     liblua5.3-dev \
     libcairo2-dev \
     libpcl-dev \
     && rm -rf /var/lib/apt/lists/*
+
 
 # GPU 런타임 설정 (NVIDIA)
 RUN apt update && apt install -y nvidia-cuda-toolkit
