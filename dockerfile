@@ -30,7 +30,7 @@ RUN git clone -b ros2 https://github.com/ros2/cartographer_ros.git
 
 # 종속성 설치
 WORKDIR /root/cartographer_ws
-RUN vcs import src < src/cartographer_ros/cartographer_ros.repos
+# RUN vcs import src < src/cartographer_ros/cartographer_ros.repos
 
 # rosdep 초기화 및 설치
 RUN rosdep update && rosdep install --from-paths src --ignore-src -r -y
